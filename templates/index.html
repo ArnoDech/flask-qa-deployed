@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini App Intelligence Artificielle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:5000/test">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://127.0.0.1:5000/test" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Projets Machine Learning
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:5000/test">Régression Linéaire</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5000/test">K-Means</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5000/test">BI avec Tableau</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<p></p>
+<h1>Remplissez le formulaire</h1>
+<form action="{{url_for('recuperation')}}" method="POST">
+    <label for="marque">Marque Voiture</label>
+    <input type="text" name="marque" id="marque">
+    <p></p>
+    <label for="modele">Modele</label>
+    <input type="text" name="modele" id="modele">
+     <p></p>
+    <label for="designationcommerciale">Désignation commerciale</label>
+    <input type="text" name="designationcommerciale" id="designationcommerciale">
+    <p></p>
+    <label for="carburant">Carburant</label>
+    <input type="text" name="carburant" id="carburant">
+    <p></p>
+    <label for="hybride">Hybribe</label>
+    <input type="text" name="hybride" id="hybride">
+    <p></p>
+    <label for="puissanceadmin">Puissance Admin</label>
+    <input type="number" name="puissanceadmin" id="puissanceadmin">
+    <p></p>
+    <label for="boitevitesse">Boite de vitesse</label>
+    <input type="text" name="boitevitesse" id="boitevitesse">
+    <p></p>
+    <label for="co2">Rejet de CO2</label>
+    <input type="number" name="co2" id="co2">
+    <p></p>
+    <label for="masse">Masse du véhicule en KG</label>
+    <input type="number" name="masse" id="masse">
+    <p></p>
+    <label for="champv9">ChampV9 de la carte grise</label>
+    <input type="text" name="champv9" id="champv9">
+    <p></p>
+    <label for="Carrosserie">Carrosserie</label>
+    <input type="text" name="Carrosserie" id="Carrosserie">
+    <p></p>
+    <label for="gamme">Gamme du véhicule</label>
+    <input type="text" name="gamme" id="gamme">
+    <p></p>
+  <input type="submit" value="Envoyer le formulaire">
+</form>
+<p></p>
+    {% if marque %}
+        <p> {{ returnvaluestest}} L/100KM</p>
+    {%endif%}
+</body>
+</html>
