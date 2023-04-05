@@ -56,7 +56,7 @@ def recuperation():
 #algo de machine learning
 def machinelearning(datacat,datanum,valuestest):
     global returnvaluestest
-    data = pd.read_excel(r'C:\Users\arnau\OneDrive\Bureau\Data & Decisions\Travail Python\Machine Learning et consommation véhicule\Ref.xlsx')
+    data = pd.read_excel('Ref.xlsx')
     data=data.drop(['conso_urb','conso_exurb','masse_ordma_max'],axis=1)
     # remplacement des valeurs nulles du champ V9 par chaine de caractère vide
     data['champ_v9'] = data['champ_v9'].replace(np.nan, '')
